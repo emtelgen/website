@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Website</title>
+    <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">EMILY TELGENHOFF</a>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/youtube.html" class="navbar__links">Youtube</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/classwork.html" class="navbar__links">Courses</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/projects.html" class="navbar__links">Projects</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="/resume.html" class="button">Resume</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <script>
+        // Function to navigate to selected page
+        function navigateToPage(select) {
+            var selectedPage = select.value;
+            if (selectedPage) {
+                window.location = selectedPage;
+            }
+        }
+        // Function to show submenu based on selected option
+        function showSubmenu(select) {
+            // Hide all submenus
+            const submenus = document.querySelectorAll('.submenu');
+            submenus.forEach(submenu => {
+                submenu.style.display = 'none';
+            });
+
+            // Show submenu corresponding to the selected option
+            const selectedValue = select.value;
+            if (selectedValue === '/unit3.html') {
+                document.getElementById('unit3Submenu').style.display = 'block';
+            }
+        }
+        
+    </script>
+    <div class="courses">
+        <h1>Computer Organization and Architecture [CSE 320]</h1>
+        <div class="course_container">
+            <div class="course_desc">
+                <div class="course_title">Course Objectives:</div>
+                <div class="course_content">
+                    <ul>
+                      <li>Understand the design of combinational and sequential circuits</li>
+                      <li>Learn the representation of and operations on basic data types</li>
+                      <li>Analyze the architecture and organization of digital computing systems</li>
+                      <li>Understand the process of translating and executing a computer program</li>
+                    </ul>
+                  </div>
+            </div>
+            <div class="course_desc">
+                <div class="course_title">Topics Covered</div>
+                <div class="course_content">
+                    <ul>
+                        <li><a href="#digital_logic">Boolean algebra and digital logic</a></li>
+                    <li><a href="#circuits">Combinational and sequential circuits</a></li>
+                    <li><a href="#data_structures">Representation of data and instructions</a></li>
+                    <li><a href="#graphs">Architecture and major components of computer systems</a></li>
+                    <li><a href="#greedy_algorithms">Assembly language programming and interfacing to high level languages</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="divider">
+            <h1>Boolean Algebra and Digital Logic</h1>
+        </div>
+        <div class="course_info" id="digital_logic">
+            <div class="course_notes">
+                <h2>Unit Notes</h2>
+                <div class="course_notes_img">
+                    <img src="../images/courses_cse320_digital_logic_notes.png" alt="Course Note 1">
+                </div>
+            </div>
+            <div class="course_divider">
+                <h2>Digital Logic Tools</h2>
+            </div>
+            <div class="course_algo">
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Circuit Types</h2>
+                        <p>Learning the specific types of each logic gate and how they can be employed to assist in building circuit logic based on their given truth tables.
+                        </p>
+                    </div>
+                </div>
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Karnaugh Maps</h2>
+                        <p>Employing karnaugh map strategies to take a given truth table and reduce it down to a minimum boolean algebra equation for circuit-building.
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse320_karnaugh.png" tag="yt__img">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="divider">
+            <h1>Combinational and Sequential Circuits</h1>
+        </div>
+        <div class="course_info" id="circuits">
+            <div class="course_notes">
+                <h2>Unit Notes</h2>
+                <div class="course_notes_img">
+                    <img src="../images/courses_cse331_sorting_notes.png" alt="Course Note 1">
+                </div>
+            </div>
+            <div class="course_divider">
+                <h2>Sorting Algorithms</h2>
+            </div>
+            <div class="course_algo">
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Selection Sort</h2>
+                        <p>Selection sort iterates through the array, and fills the smallest unsorted item in the largest sorted spot. Time Complexity is O(n²) and the space is O(1).
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse331_selectionsort.png" tag="yt__img">
+                    </div>
+                </div>
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Insertion Sort</h2>
+                        <p>This sorting algorithm iterates through the array, and fills the next unsorted item into it's correct position within the sorted items of the array. Time Complexity is at worst O(n²) and at best O(n). 
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse331_insertionsort.png" tag="yt__img">
+                    </div>
+                </div>
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Hybrid Merge Sort</h2>
+                        <p>This is a hybrid of the normal merge sort, which utilizes merge sort up until a certain threshold, at which it will begin to use insertion sort. This aids the runtime because insertion sort tends to run at faster complexities
+                            than merge sort when the array length is small, giving this hybrid sort an advantage. The time complexity of this sort is O(nlogn).
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse331_hybridmergesort.png" tag="yt__img">
+                    </div>
+                </div>
+                <div class="course_divider">
+                    <h2>Coding Portion</h2>
+                </div>
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Unit Coding Challenge</h2>
+                        <p>This coding challenge worked through four different ways to find the indices of the first two numbers that sum up to the target number. We utilized a sorted array with two pointers to the current right and left indices, and incremented them
+                            based on the current value of their sum. This was the fastest way to utilize two-sum with a sorted array, with a time complexity of O(n). Other ways involve brute-force adding every pair of numbers possible with a time complexity of O(n²), as well
+                            as utilizing a dictionary to store numbers needed to add up to the sum, which has a time complexity of O(n), but also uses O(n) space for the dictionary.
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse331_cc4_sorting.png" tag="yt__img">
+                    </div>
+                </div>
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Unit Project</h2>
+                        <p>This project employed the previously discussed sorting algorithms, to take individual SAT scores and return information on which parts of the score were above the median parameter. Utilizing the hybrid merge sort that
+                            we implemented, the time complexity of this function is O(nlogn).
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse331_sorting_project.png" tag="yt__img">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="divider">
+            <h1>Data Structures and ADTs</h1>
+        </div>
+        <div class="course_info" id="data_structures">
+            <div class="course_notes">
+                <h2>Unit Notes</h2>
+                <div class="course_notes_img">
+                    <img src="../images/courses_cse331_adt_notes1.png" alt="Course Note 1">
+                </div>
+                <div class="course_notes_img">
+                    <img src="../images/courses_cse331_adt_notes2.png" alt="Course Note 2">
+                </div>
+                <div class="course_notes_img">
+                    <img src="../images/courses_cse331_adt_notes3.png" alt="Course Note 2">
+                </div>
+                <div class="course_notes_img">
+                    <img src="../images/courses_cse331_adt_notes4.png" alt="Course Note 2">
+                </div>
+                <div class="course_notes_img">
+                    <img src="../images/courses_cse331_adt_notes5.png" alt="Course Note 2">
+                </div>
+            </div>
+            <div class="course_divider">
+                <h2>Data Structures</h2>
+            </div>
+            <div class="course_algo">
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Stack</h2>
+                        <p>Implementation of member functions for a Min Stack ADT, allowing for pushing an element onto the stack, popping from the min stack, viewing the top element, and returning the minimum element in the stack.
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse331_cc6.png" tag="yt__img">
+                    </div>
+                </div>
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Queue</h2>
+                        <p>One project involved implementation of a Queue ADT. Attached is an example of the dequeue member function for a queue object, which removes the front (or back if specified) item from the queue, and updates the array size accordingly.
+                            This function will run in O(1) time.
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse331_queue.png" tag="yt__img">
+                    </div>
+                </div>
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Hash Table</h2>
+                        <p>Another project gave us the opportunity to implement a Hash Table ADT. Attached is an example of the main functions for a hash table, all running at an amortized run time of O(1), allowing for growing and shrinking of the array size accordingly.
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse331_hashtable.png" tag="yt__img">
+                    </div>
+                </div>
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Binary Search Trees</h2>
+                        <p>After learning the properties of trees in coding, we implemented a Binary Search Tree ADT. Attached is an example of an insertion function into a Binary Search Tree, which is able to run in O(logn) time due to the reduction of the searchable size 
+                            of insertion with each step of the search according to the invariants of a BST.
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse331_bst.png" tag="yt__img">
+                    </div>
+                </div>
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>AVL Trees</h2>
+                        <p>Implementing an AVL tree is similar to that of a BST, however additional mechanics have to be implemented in order for the tree to have the balanced invariant that is required of an AVL tree. Attached is a copy of the rebalancing function that is run 
+                            any time the balance factor is greater or less than the allowed window of each tree node. The time complexity of this function is O(1).
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse331_avl.png" tag="yt__img">
+                    </div>
+                </div>
+            </div>
+            <div class="course_divider">
+                <h2>Tree Traversals</h2>
+            </div>
+            <div class="course_algo">
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Inorder Traversal</h2>
+                        <p>Follows the search pattern of: left child, then root, then right child. This will start at the very left-most element and traverse the roots and right children, eventually hitting the root node, and then traversing to the root node's right children.
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse331_inorder.png" tag="yt__img">
+                    </div>
+                </div>
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Preorder Traversal</h2>
+                        <p>Follows the search pattern of: root, left child, right child. This will start at the root and go down all the way until the left-most node is hit, and then traverse backwards through each root node's right child, eventually getting back to the root node and traversing through the right children.
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse331_preorder.png" tag="yt__img">
+                    </div>
+                </div>
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Postorder Traversal</h2>
+                        <p>Follows the search pattern of: left child, right child, root. This will start at the very left-most node and traverse back up until hitting the root, then traversing through all the right children before the root node is added.
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse331_postorder.png" tag="yt__img">
+                    </div>
+                </div>
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Levelorder Traversal</h2>
+                        <p>This traverses through each level of the tree, yielding each node based on it's height in the tree, smaller heights being added first. It utilizes a queue to keep track of the current level nodes children.
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse331_levelorder.png" tag="yt__img">
+                    </div>
+                </div>
+            </div>
+            <div class="course_divider">
+                <h2>Coding Portion</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

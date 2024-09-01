@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Website</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">EMILY TELGENHOFF</a>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/youtube.html" class="navbar__links">Youtube</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/classwork.html" class="navbar__links">Courses</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/projects.html" class="navbar__links">Projects</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="/resume.html" class="button">Resume</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="project">
+        <div class="projectdesc">
+            <div class="projectdesc_video">
+                <img src="images/euchre_project.png" id="ws">
+            </div>
+            <div class="projectdesc_text">
+                <h1>Game Creation Using Java</h1>
+                <p>
+                    Using Object Oriented Programming with Java code to create the card game Euchre. During this project I learned how to utilize enums within Java classes, the best data structures to use for the particular task,
+                    and how to best separate what should be a class and what should be a created data structure.
+                </p>
+                <a href="https://github.com/emtelgen/emtelgen.github.io">
+                    <img src="images/github.png" alt="Channel Link" style="width:100px;height:100px;" tag="yt__img">
+                </a>
+            </div>
+        </div>
+        <div class="divider">
+            <h1>Creation Procedure</h1>
+        </div>
+        <div class="project_algo">
+            <div class="project_algo_1">
+                <div class="project_algo_1_desc">
+                    <h2>Step One</h2>
+                    <p>Creating the separate classes. In this program I had a Card class with enums of Color, Suit, and Rank. I had a Deck class to make the deck of cards. I also had a Player deck to keep track of separate player hands and scores.
+                    </p>
+                </div>
+                <div class="project_algo_1_img">
+                    <a href="https://github.com/emtelgen/euchre/blob/main/Card.java#L47-L53">
+                        <img id="ws" src="images/euchre_1.png" tag="yt__img">
+                    </a>
+                </div>
+            </div>
+            <div class="project_algo_1">
+                <div class="project_algo_1_desc">
+                    <h2>Step Two</h2>
+                    <p>Adding specific methods in each class. Some methods I needed to utilize included a method in the Card class that determined the highest value card in a list of cards, a method to rearrange a player's hand if they were to pick up the 
+                        dealer's card, and a method to deal out a list of cards to each player.
+                    </p>
+                </div>
+                <div class="project_algo_1_img">
+                    <a href="https://github.com/emtelgen/euchre/blob/main/Deck.java#L21-L31">
+                        <img id="ws" src="images/euchre_2.png" tag="yt__img">
+                    </a>
+                </div>
+            </div>
+            <div class="project_algo_1">
+                <div class="project_algo_1_desc">
+                    <h2>Step Three</h2>
+                    <p>Establishing the functionality of the Main class. This involved a while loop to keep the game going until a team reached the maximum score of 10, several for loops to iterate through the list of players as they made their turns, and 
+                        putting all the class methods to use within the main file.
+                    </p>
+                </div>
+                <div class="project_algo_1_img">
+                    <a href="https://github.com/emtelgen/euchre/blob/main/Main.java#L8-L15">
+                        <img id="ws" src="images/euchre_3.png" tag="yt__img">
+                    </a>
+                </div>
+            </div>
+            <div class="project_algo_1">
+                <div class="project_algo_1_desc">
+                    <h2>Step Four</h2>
+                    <p>Checking the program for errors through tests. An error I found during testing was that the code was not accounting for the fact that a card played that does not match the first suit or trump suit was being counted as higher than other cards,
+                        when in reality they should not be counted at all. Errors like these had to be fixed in order to achieve the working program.
+                    </p>
+                </div>
+                <div class="project_algo_1_img">
+                    <a href="https://github.com/emtelgen/euchre/blob/main/Card.java#L63-L68">
+                        <img id="ws" src="images/euchre_4.png" tag="yt__img">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="divider">
+            <h1>Additional Modifications</h1>
+        </div>
+        <div class="modifications">
+            <p>
+                Additional modifications to this program would be creating a playable game. I created the framework for the Euchre game however I did not make it so that bots could play, or that information could be hidden and only presented to certain players. In the future
+                I would like to add a GUI to the game and present this information in a playable way.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

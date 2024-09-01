@@ -1,0 +1,667 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: black;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbar__logo {
+    background-color: white;
+    background-image: linear-gradient(to top, #1bb4ad 0%, white 100%);
+    background-size: 50%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.fa-gem {
+    margin-right: 0.5rem;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item {
+    height: 80px;
+}
+
+.navbar__links {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.navbar__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #1bb4ad;
+    color: white;
+}
+
+.button:hover {
+    background: #0e6588;
+    transition: all 0.3s ease;
+}
+
+.navbar__links:hover {
+    color: #1bb4ad;
+    transition: all 0.3s ease;
+}
+
+  
+
+.main {
+  background-color: #141414;
+}
+
+.main__content {
+  position: relative;
+  top: 20px;
+  background-color: #141414;
+  padding: 0 20px; /* Add padding to the content */
+}
+
+/* Flexbox for larger screens */
+.main__content--scholar,
+.main__content--athlete,
+.main__content--leader {
+  display: flex;
+  flex-direction: row; /* Side by side for larger screens */
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+/* Flexbox for smaller screens */
+@media (max-width: 768px) {
+  .main__content--scholar,
+  .main__content--athlete,
+  .main__content--leader {
+      flex-direction: column; /* Stacked on smaller screens */
+  }
+}
+
+.main__content--scholar__text,
+.main__content--athlete__text,
+.main__content--leader__text {
+  width: 50%; /* Adjust width for text on smaller screens */
+  max-width: 500px; /* Limit maximum width */
+  margin: 0 auto 20px; /* Add margin at the bottom and center the text */
+}
+
+.main__content h1 {
+  color: white;
+  font-size: 3rem; /* Adjust font size for smaller screens */
+}
+
+.main__content p {
+  color: white;
+  font-size: 1.6rem; /* Adjust font size for smaller screens */
+}
+
+.main__content--scholar__img,
+.main__content--athlete__img,
+.main__content--leader__img {
+  width: 50%; /* Adjust width for images on smaller screens */
+  max-width: 300px; /* Limit maximum width */
+  margin: 0 auto; /* Center the images */
+  margin-top: 20px; /* Add some margin at the top */
+}
+
+
+
+
+
+
+
+  .main__yt {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+  }
+  .main__content__yt{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    height: 50vh;
+  }
+
+  .main__content__yt_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+  }
+  .main__content__yt h1 {
+    position: relative;
+    color: white;
+    text-align: center;
+    font-size: 4rem;
+  }
+  .main__content__yt p {
+    position: relative;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+  }
+
+
+
+  .project {
+    background-color: #141414;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-top: 40px;
+    padding-bottom: 70px;
+}
+
+.project h1 {
+    color: white;
+    text-align: center;
+    font-size: 3rem; /* Reduce font size */
+}
+
+.project p {
+    text-align: center;
+    font-size: 1.6rem; /* Reduce font size */
+    color: white;
+}
+
+.projectdesc {
+    display: flex;
+    flex-direction: column; /* Change to column for smaller screens */
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Adjust gap between elements */
+    padding-bottom: 50px; /* Adjust padding */
+}
+
+.projectdesc_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 500px; /* Limit maximum width */
+    text-align: center; /* Center text */
+}
+
+.projectdesc_video {
+    max-width: 800px; /* Limit maximum width for video container */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Adjust image size */
+.projectdesc_video video {
+    max-width: 100%; /* Ensure the video doesn't overflow its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+  .project_algo {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .project_algo h2 {
+    color: white;
+    text-decoration-line: underline;
+    font-size: 40px;
+  }
+
+  .project_algo_1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+    .project_algo_1_desc {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 30%;
+    }
+
+    #ws {
+      border: 3px solid #1bb4ad;
+    }
+    .divider {
+      font-size: 30px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .divider::before, .divider::after {
+      flex: 1;
+      content: '';
+      padding: 3px;
+      background-color: #1bb4ad;
+      margin: 5px;
+    }
+
+  .modifications {
+    width: 75%;
+    align-self: center;
+  }
+
+  .choice {
+    background-color: #141414;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .choice h1 {
+    color: white;
+  }
+
+
+
+.choice_row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.choice_row_img {
+  position: relative;
+  width: 40%; /* Set width to take up 40% of the screen */
+}
+
+.choice_image {
+  width: 100%; /* Set image width to fill its container */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  border: 3px solid #1bb4ad; /* Add border around the image */
+  border-radius: 10px; /* Optional: add border radius for rounded corners */
+}
+
+.choice_overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #141414;
+}
+
+.choice_row_img:hover .choice_overlay {
+  opacity: 1;
+}
+
+.choice_row .text {
+  color: #1bb4ad;
+  font-size: 300%;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  text-align: center; /* Center the text horizontally */
+}
+
+
+  .resume {
+    background-color: #141414;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 40px;
+  }
+  .filler {
+    background-color: #141414;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow:hidden;
+    z-index:-1;
+  }
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 50%;
+}
+
+.dropdown label {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.dropdown select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 2px solid #1bb4ad;
+    border-radius: 4px;
+    background-color: #141414;
+    color: white;
+    appearance: none; /* Remove default arrow icon */
+    cursor: pointer;
+}
+
+.dropdown select:hover,
+.dropdown select:focus {
+    outline: none;
+    border-color: #0e6588;
+}
+
+/* Style for dropdown options */
+.dropdown select option {
+    background-color: #141414;
+    color: white;
+}
+
+.projectdesc_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 50%;
+}
+
+.projectdesc h2 {
+  color: white;
+  text-align: center;
+  font-size: 2rem; /* Adjust font size as needed */
+}
+
+
+
+
+.courses {
+  background-color: #141414;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding-top: 40px;
+  padding-bottom: 70px;
+}
+
+.courses h1 {
+  color: white;
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.course_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.course_desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 50%;
+}
+
+.course_title {
+  color: white;
+  text-align: center;
+  font-size: 2.5rem; /* Adjust font size as needed */
+}
+
+.course_content {
+  text-align: center;
+  font-size: 2rem; /* Adjust font size as needed */
+  color: white;
+}
+
+.course_image {
+  display: block;
+  width: 100px; /* Adjust width as needed */
+  height: 100px; /* Adjust height as needed */
+  border: 3px solid #1bb4ad;
+  margin-bottom: 20px;
+}
+
+.course_link {
+  color: white;
+  text-decoration: none;
+}
+
+.course_link:hover {
+  color: #1bb4ad;
+}
+
+.course_content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.course_content ul li {
+  color: white;
+  font-size: 1.6rem; /* Reduced font size */
+  margin-bottom: 10px;
+  padding-left: 1.5em; /* Adjusted padding */
+}
+
+.course_content ul li::before {
+  content: "•";
+  color: #1bb4ad;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1.5em; /* Adjusted margin to align bullet points */
+}
+
+.course_content ul li a {
+  color: #1bb4ad; /* Light blue color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+.course_content ul li a:hover {
+  color: #0e6588; /* Darker blue color on hover */
+}
+
+.course_sections {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 100px;
+  color: white; /* Set text color to white */
+}
+
+.course_sections_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 50%;
+}
+
+.course_algo {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.course_algo h2 {
+  color: white;
+  text-decoration-line: underline;
+  font-size: 2rem; /* Adjust font size as needed */
+}
+
+.course_algo_1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.course_algo_1_desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
+.course_notes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center images horizontally */
+  align-items: center;
+}
+
+.course_notes h2 {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  width: 100%;
+}
+
+.course_notes_img {
+  margin: 20px;
+  flex-grow: 0; /* Disable flex-grow */
+  box-sizing: border-box;
+  text-align: center; /* Center the image horizontally */
+}
+
+.course_notes_img img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 3px solid #1bb4ad;
+}
+
+
+.courses p {
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+}
+
+.course_divider {
+  font-size: 20px; /* Adjusted font size */
+  display: flex;
+  align-items: center;
+  width: 75%; /* Set width to 75% of the screen width */
+  margin: 20px auto; /* Center the divider and add space between the line and content */
+}
+
+.course_divider::before, .course_divider::after {
+  flex: 1;
+  content: '';
+  padding: 0 5px; /* Adjusted padding */
+  margin: 0 10px; /* Adjusted margin */
+  border-top: 1px dashed #1bb4ad; /* Use border for dashed line */
+}
+
+.course_divider h2 {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  text-decoration: none; /* Remove underline */
+}
+
+.class_row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.class_row_img {
+  width: calc(25% - 20px); /* 25% width for four boxes per row with margin */
+  margin: 10px;
+  text-align: center; /* Center text horizontally */
+}
+
+.class_row .button {
+  display: flex;
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
+  width: 100%;
+  height: 100%; /* Change height to 100% to fill up the entire button height */
+  padding: 20px 40px; /* Increase padding for better button size */
+  border: 2px solid #1bb4ad;
+  border-radius: 10px;
+  background-color: #141414;
+  color: white;
+  text-decoration: none;
+  font-size: 20px; /* Increase font size for better readability */
+}
+
+.class_row .button:hover {
+  background-color: #1bb4ad;
+  color: white;
+}

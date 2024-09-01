@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Website</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">EMILY TELGENHOFF</a>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/youtube.html" class="navbar__links">Youtube</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/classwork.html" class="navbar__links">Courses</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/projects.html" class="navbar__links">Projects</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="/resume.html" class="button">Resume</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="project">
+        <div class="projectdesc">
+            <div class="projectdesc_video">
+                <img src="images/algorithms_project.png" style="width:800px;height:500px;" id="ws">
+            </div>
+            <div class="projectdesc_text">
+                <h1>Sorting and Searching</h1>
+                <p>
+                    Used Python and Scala to create github respositories with different sorting and searching algorithms including different tree traversal 
+                    algorithms such as postorder and inorder traversals, binary search algorithm, and sorting algorithms such as selection sort and insertion sort.
+                    I have displayed a few of these programs below.
+                </p>
+                <a href="https://github.com/emtelgen/Trees">
+                    <img src="images/github.png" alt="Channel Link" style="width:100px;height:100px;" tag="yt__img">
+                </a>
+            </div>
+        </div>
+        <div class="divider">
+            <h1>Creation Procedure</h1>
+        </div>
+        <div class="project_algo">
+            <div class="project_algo_1">
+                <div class="project_algo_1_desc">
+                    <h2>Binary Search</h2>
+                    <p>A searching algorithm coded iteratively that determines the position of an element in a sorted array. Notable attributes of the algorithm
+                        include determining if the target item is less than or greater than the current indexed element, and repeating that process until the target
+                        is found or determined to not exist. Coded in Python.
+                    </p>
+                </div>
+                <div class="project_algo_1_img">
+                    <a href="https://github.com/emtelgen/Trees/blob/main/binarySearchIterative.py#L3-L16">
+                        <img id="ws" src="images/sands_1.png" tag="yt__img">
+                    </a>
+                </div>
+            </div>
+            <div class="project_algo_1">
+                <div class="project_algo_1_desc">
+                    <h2>Pre-Order Traversal</h2>
+                    <p>A type of tree traversal that recursively searches through a tree. The algorithm adds the root to the list, followed by 
+                        the left node and subsequently the right node. Coded in Scala.
+                    </p>
+                </div>
+                <div class="project_algo_1_img">
+                    <a href="https://github.com/emtelgen/DataStructures/blob/main/hw6.scala#L19-L30">
+                        <img id="ws" src="images/sands_2.png" tag="yt__img">
+                    </a>
+                </div>
+            </div>
+            <div class="project_algo_1">
+                <div class="project_algo_1_desc">
+                    <h2>Merge Sort</h2>
+                    <p>A sorting algorithm that recursively divides the array in half until there can be no more splits made. These subarrays are merged back
+                        into a full array in the correct order. Coded in Python.
+                    </p>
+                </div>
+                <div class="project_algo_1_img">
+                    <a href="https://github.com/emtelgen/Trees/blob/main/mergesort.py#L16-L23">
+                        <img id="ws" src="images/sands_3.png" tag="yt__img">
+                    </a>
+                </div>
+            </div>
+            <div class="project_algo_1">
+                <div class="project_algo_1_desc">
+                    <h2>Post-Order N-ary Tree Traversal</h2>
+                    <p>A traversal algorithm that searches through a N-ary tree starting at the left node, then the right node, then adding the root lastly. 
+                        Coded in Python.
+                    </p>
+                </div>
+                <div class="project_algo_1_img">
+                    <a href="https://github.com/emtelgen/Trees/blob/main/nary_postorder.py#L3-L13">
+                        <img id="ws" src="images/sands_4.png" tag="yt__img">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="divider">
+            <h1>Additional Modifications</h1>
+        </div>
+        <div class="modifications">
+            <p>
+                Additional algorithms that I would add to this repository include the Heap Sort and Tim Sort algorithms. I would also add searching algorithms
+                for non-sorted arrays such as Linear Search.
+            </p>
+        </div>
+    </div>
+</body>

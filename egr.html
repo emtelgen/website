@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Website</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">EMILY TELGENHOFF</a>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/youtube.html" class="navbar__links">Youtube</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/classwork.html" class="navbar__links">Courses</a>
+                </li>
+                <li class="navbar__item">
+
+                    <a href="/projects.html" class="navbar__links">Projects</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="/resume.html" class="button">Resume</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="project">
+        <div class="projectdesc">
+            <div class="projectdesc_video">
+                <video src="images/IMG_9229.mov" controls muted width="960" height="540" tag="yt__vid">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="projectdesc_text">
+                <h1>Circuit Development</h1>
+                <p>
+                    Within a team, created a 3D Vehicle model with a mounted Adafruit Gemma Circuit consisting of 12 individual LEDs. This circuit was personally coded using Arduino Software IDE to create the effects of a police car flash, which then turned into Michigan State University colors. 
+                    The vehicle was modeled with corrugated plastic.
+                </p>
+                <a href="https://github.com/emtelgen/egrproject">
+                    <img src="images/github.png" alt="Channel Link" style="width:100px;height:100px;" tag="yt__img">
+                </a>
+            </div>
+        </div>
+        <div class="divider">
+            <h1>Creation Procedure</h1>
+        </div>
+        <div class="project_algo">
+            <div class="project_algo_1">
+                <div class="project_algo_1_desc">
+                    <h2>Step One</h2>
+                    <p>In order to develop the code for the Gemma, it had to be wired and soldered correctly. We first used alligator clips to ensure our wiring diagram was correct, and then soddered small wires into the correct input and output areas on the circuit. 
+                    </p>
+                </div>
+                <div class="project_algo_1_img">
+                    <img id="ws" src="images/egr_3.png" tag="yt__img">
+                </div>
+            </div>
+            <div class="project_algo_1">
+                <div class="project_algo_1_desc">
+                    <h2>Step Two</h2>
+                    <p>Once the Gemma was correctly set up, we could then change the color scheme. We had two different color schemes (one for average police cars (red/blue) and one for Michigan State colors (green/white)). We then created three different functions for each color scheme to show off.
+                        One example function took a color value and a wait time, and then iterated through the entire circuit for a certain amount of times, turning lights on and off, determining certain colors based on the modulus operation of their set pin number.
+                    </p>
+                </div>
+                <div class="project_algo_1_img">
+                    <a href="https://github.com/emtelgen/egrproject/blob/main/sketch_sep27a.ino#L47-L66">
+                        <img id="ws" src="images/egr_1.png" tag="yt__img">
+                    </a>
+                </div>
+            </div>
+            <div class="project_algo_1">
+                <div class="project_algo_1_desc">
+                    <h2>Step Three</h2>
+                    <p>Another function to highlight is the function that circled around, with occasional flashes and color changes. This differed from that of the previous because instead of the colors just turning on and off, the color scheme would effectively rotate, again using modulus arithmetic.
+                    </p>
+                </div>
+                <div class="project_algo_1_img">
+                    <a href="https://github.com/emtelgen/egrproject/blob/main/sketch_sep27a.ino#L91-L101">
+                        <img id="ws" src="images/egr_2.png" tag="yt__img">
+                    </a>
+                </div>
+            </div>
+            <div class="project_algo_1">
+                <div class="project_algo_1_desc">
+                    <h2>Step Four</h2>
+                    <p>After completing the software development of the circuit, it was mounted onto the 3D structure. A hole was cut in the corrugated plastic where the circuit was placed.
+                    </p>
+                </div>
+                <div class="project_algo_1_img">
+                    <a href="https://github.com/emtelgen/euchre/blob/main/Card.java#L63-L68">
+                        <img id="ws" src="images/egr_4.png" tag="yt__img">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="divider">
+            <h1>Additional Modifications</h1>
+        </div>
+        <div class="modifications">
+            <p>
+                Additional modifications include coding modifications and modeling modifications. Additional functionality could be added to the circuit, for example an on/off button for the circuit that was placed in an easily accessible spot for the user. 
+            </p>
+        </div>
+    </div>
+</body>
+</html>

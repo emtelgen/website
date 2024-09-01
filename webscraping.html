@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Website</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">EMILY TELGENHOFF</a>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/youtube.html" class="navbar__links">Youtube</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/classwork.html" class="navbar__links">Courses</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/projects.html" class="navbar__links">Projects</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="/resume.html" class="button">Resume</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="project">
+        <div class="projectdesc">
+            <div class="projectdesc_video">
+                <video id="ws" width="800" height="500" controls>
+                    <source src="webscraping.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                  </video>
+            </div>
+            <div class="projectdesc_text">
+                <h1>Web Scraping and Interaction</h1>
+                <hr width="100%">
+                <p>
+                    Using the Python selenium library, determined validity of user reports based on a 
+                    created algorithm for each type of report. Returned the report with the reviewed verdict with 95% accuracy.
+                    Click the button below for the link to the full code on GitHub.
+                </p>
+                <a href="https://github.com/emtelgen/seleniumproject">
+                    <img src="images/yt.png" alt="Channel Link" style="width:100px;height:100px;" tag="yt__img">
+                </a>
+            </div>
+        </div>
+        <div class="divider">
+            <h1>Creation Procedure</h1>
+        </div>
+        <div class="project_algo">
+            <div class="project_algo_1">
+                <div class="project_algo_1_desc">
+                    <h1>Step One</h1>
+                    <p>Accessing the web server in the main script. This was done using a driver to access the Website 
+                        and continuously allowing access after reloading.
+                    </p>
+                </div>
+                <div class="project_algo_1_img">
+                    <a href="https://github.com/emtelgen/seleniumproject/blob/main/employee.py#L25-L32">
+                        <img id="ws" src="images/webscraping_1.png" width=600px tag="yt__img">
+                    </a>
+                </div>
+            </div>
+            <div class="project_algo_1">
+                <div class="project_algo_1_desc">
+                    <h1>Step Two</h1>
+                    <p>Extracting the information from each report and formatting it (function shown was used to
+                        extract the username within the report). This was executed in the main script using the functions in the supplementary
+                        file "report_info.py".
+                    </p>
+                </div>
+                <div class="project_algo_1_img">
+                    <a href="https://github.com/emtelgen/seleniumproject/blob/main/report_info.py#L32-L44">
+                        <img id="ws" src="images/webscraping_3.png" width=600px tag="yt__img">
+                    </a>
+                </div>
+            </div>
+            <div class="project_algo_1">
+                <div class="project_algo_1_desc">
+                    <h1>Step Three</h1>
+                    <p>Running an algorithm based on the report type. The main script would access supplementary scripts in sibling failures
+                        based on the information extracted in the previous step. The picture shows an example of accessing these functions.
+                    </p>
+                </div>
+                <div class="project_algo_1_img">
+                    <a href="https://github.com/emtelgen/seleniumproject/blob/main/employee.py#L85-L89">
+                        <img id="ws" src="images/webscraping_4.png" width=600px tag="yt__img">
+                    </a>
+                </div>
+            </div>
+            <div class="project_algo_1">
+                <div class="project_algo_1_desc">
+                    <h1>Step Four</h1>
+                    <p>Processing judgement on the report based on the returned information. The sleep function is added to not overload
+                        the website with constant judgement votes.
+                    </p>
+                </div>
+                <div class="project_algo_1_img">
+                    <a href="https://github.com/emtelgen/seleniumproject/blob/main/employee.py#L120-L127">
+                        <img id="ws" src="images/webscraping_5.png" width=600px tag="yt__img">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

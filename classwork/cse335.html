@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Website</title>
+    <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">EMILY TELGENHOFF</a>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/youtube.html" class="navbar__links">Youtube</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/classwork.html" class="navbar__links">Courses</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/projects.html" class="navbar__links">Projects</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="/resume.html" class="button">Resume</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <script>
+        // Function to navigate to selected page
+        function navigateToPage(select) {
+            var selectedPage = select.value;
+            if (selectedPage) {
+                window.location = selectedPage;
+            }
+        }
+        // Function to show submenu based on selected option
+        function showSubmenu(select) {
+            // Hide all submenus
+            const submenus = document.querySelectorAll('.submenu');
+            submenus.forEach(submenu => {
+                submenu.style.display = 'none';
+            });
+
+            // Show submenu corresponding to the selected option
+            const selectedValue = select.value;
+            if (selectedValue === '/unit3.html') {
+                document.getElementById('unit3Submenu').style.display = 'block';
+            }
+        }
+        
+    </script>
+    <div class="courses">
+        <h1>Computer Organization and Architecture [CSE 320]</h1>
+        <div class="course_container">
+            <div class="course_desc">
+                <div class="course_title">Course Objectives:</div>
+                <div class="course_content">
+                    <ul>
+                      <li>Students will learn methods for structuring computer programs using object-oriented methodologies.</li>
+                      <li>Students will gain experience using object-oriented methods include inheritance, polymorphism.</li>
+                      <li>Students will learn how to apply design patterns to the solution of programming problems.</li>
+                      <li>Students learn about professional programming methodologies and ethics, and effective communication.</li>
+                    </ul>
+                  </div>
+            </div>
+            <div class="course_desc">
+                <div class="course_title">Topics Covered</div>
+                <div class="course_content">
+                    <ul>
+                        <li><a href="#digital_logic">Design assignments using design techniques for object-oriented programming</a></li>
+                    <li><a href="#step">Step assignments employing principles of design to create large programs</a></li>
+                    <li><a href="#data_structures">Large project work to encompass both design and coding</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="divider">
+            <h1>Step Assignments</h1>
+        </div>
+        <div class="course_info" id="step">
+            <div class="course_divider">
+                <h2>Step One: Introducing Object-Oriented Programming</h2>
+            </div>
+            <div class="course_algo">
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Overview</h2>
+                        <p>This assignment introduced the ideas of polymorphism and inheritance to create a farm of different types of animals that allowed users to view different statistics of the inventory of farm animals existing.
+                        </p>
+                    </div>
+                </div>
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Task: Add a Velociraptor</h2>
+                        <p>With inheritance we can create a velociptor class that extends the Animal class in order to extend member functions from the Animal functions in the Velociraptor class. Because velociraptor's can also have aggression units, a new member variable and member function must be created for this functionality.
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse335_step1_1.png" tag="yt__img">
+                    </div>
+                </div>
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Task: Statistics for Farm Aggressiveness</h2>
+                        <p>Using the virtual member function that gets the aggression of each type of animal, the farm can call this function on each of the animals in its inventory and output the statistics accordingly.
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse335_step1_2.png" tag="yt__img">
+                    </div>
+                </div>
+            </div>
+            <div class="course_divider">
+                <h2>Step Two: Creating an Aquarium</h2>
+            </div>
+            <div class="course_algo">
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Overview</h2>
+                        <p>This assignment will introduce CMake, wxWidgets, and how to create an application with a graphical user interface. Step 2 is the first of a three-step sequence that develops the Aquarium application from scratch to a working aquarium with decor and swimming fish. It introduces many of the tools and techniques for object-oriented software development and graphical user interfaces.
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse335_step2_1.png" tag="yt__img">
+                    </div>
+                </div>
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Task: Creating the Aquarium Object</h2>
+                        <p>The Aquarium class consists of the background image that will display upon the program being run. We use a smart pointer to store this background image so when the Aquarium object is destroyed, the memory allocated for items within it such as the background image will automatically be destroyed.
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse335_step2_2.png" tag="yt__img">
+                    </div>
+                </div>
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Task: Testing an Abstract Class</h2>
+                        <p>Utilizing test-driven development was an important part of this class. In order to ensure programs work, testing should ensure objects are being created and destroyed properly. However some classes, such as the Item class disable the use of the constructor when it is not supposed to be used. Because of this, sometimes testing may need to make use of mock classes that instantiate the object themselves.
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse335_step2_3.png" tag="yt__img">
+                    </div>
+                </div>
+            </div>
+            <div class="course_divider">
+                <h2>Step Three: Populating the Aquarium</h2>
+            </div>
+            <div class="course_algo">
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Overview</h2>
+                        <p>This assignment continues the Aquarium project started in Step 2. An object-oriented structure is created for managing fish in your aquarium. New user interface features such as menus are introduced, and test-driven development is emphasized as a means of efficiently developing code.
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse335_step2_1.png" tag="yt__img">
+                    </div>
+                </div>
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Task: Menu Event Handlers</h2>
+                        <p>In order to create working GUI for users, menu event handlers need to be created. 
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse335_step2_2.png" tag="yt__img">
+                    </div>
+                </div>
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Task: Testing an Abstract Class</h2>
+                        <p>Utilizing test-driven development was an important part of this class. In order to ensure programs work, testing should ensure objects are being created and destroyed properly. However some classes, such as the Item class disable the use of the constructor when it is not supposed to be used. Because of this, sometimes testing may need to make use of mock classes that instantiate the object themselves.
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse335_step2_3.png" tag="yt__img">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="divider">
+            <h1>Combinational and Sequential Circuits</h1>
+        </div>
+        <div class="course_info" id="circuits">
+            <div class="course_notes">
+                <h2>Unit Notes</h2>
+                <div class="course_notes_img">
+                    <img src="../images/courses_cse331_sorting_notes.png" alt="Course Note 1">
+                </div>
+            </div>
+            <div class="course_divider">
+                <h2>Sorting Algorithms</h2>
+            </div>
+            <div class="course_algo">
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Selection Sort</h2>
+                        <p>Selection sort iterates through the array, and fills the smallest unsorted item in the largest sorted spot. Time Complexity is O(n²) and the space is O(1).
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse331_selectionsort.png" tag="yt__img">
+                    </div>
+                </div>
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Insertion Sort</h2>
+                        <p>This sorting algorithm iterates through the array, and fills the next unsorted item into it's correct position within the sorted items of the array. Time Complexity is at worst O(n²) and at best O(n). 
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse331_insertionsort.png" tag="yt__img">
+                    </div>
+                </div>
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Hybrid Merge Sort</h2>
+                        <p>This is a hybrid of the normal merge sort, which utilizes merge sort up until a certain threshold, at which it will begin to use insertion sort. This aids the runtime because insertion sort tends to run at faster complexities
+                            than merge sort when the array length is small, giving this hybrid sort an advantage. The time complexity of this sort is O(nlogn).
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse331_hybridmergesort.png" tag="yt__img">
+                    </div>
+                </div>
+                <div class="course_divider">
+                    <h2>Coding Portion</h2>
+                </div>
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Unit Coding Challenge</h2>
+                        <p>This coding challenge worked through four different ways to find the indices of the first two numbers that sum up to the target number. We utilized a sorted array with two pointers to the current right and left indices, and incremented them
+                            based on the current value of their sum. This was the fastest way to utilize two-sum with a sorted array, with a time complexity of O(n). Other ways involve brute-force adding every pair of numbers possible with a time complexity of O(n²), as well
+                            as utilizing a dictionary to store numbers needed to add up to the sum, which has a time complexity of O(n), but also uses O(n) space for the dictionary.
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse331_cc4_sorting.png" tag="yt__img">
+                    </div>
+                </div>
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Unit Project</h2>
+                        <p>This project employed the previously discussed sorting algorithms, to take individual SAT scores and return information on which parts of the score were above the median parameter. Utilizing the hybrid merge sort that
+                            we implemented, the time complexity of this function is O(nlogn).
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse331_sorting_project.png" tag="yt__img">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="divider">
+            <h1>Data Structures and ADTs</h1>
+        </div>
+        <div class="course_info" id="data_structures">
+            <div class="course_notes">
+                <h2>Unit Notes</h2>
+                <div class="course_notes_img">
+                    <img src="../images/courses_cse331_adt_notes1.png" alt="Course Note 1">
+                </div>
+                <div class="course_notes_img">
+                    <img src="../images/courses_cse331_adt_notes2.png" alt="Course Note 2">
+                </div>
+                <div class="course_notes_img">
+                    <img src="../images/courses_cse331_adt_notes3.png" alt="Course Note 2">
+                </div>
+                <div class="course_notes_img">
+                    <img src="../images/courses_cse331_adt_notes4.png" alt="Course Note 2">
+                </div>
+                <div class="course_notes_img">
+                    <img src="../images/courses_cse331_adt_notes5.png" alt="Course Note 2">
+                </div>
+            </div>
+            <div class="course_divider">
+                <h2>Data Structures</h2>
+            </div>
+            <div class="course_algo">
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Stack</h2>
+                        <p>Implementation of member functions for a Min Stack ADT, allowing for pushing an element onto the stack, popping from the min stack, viewing the top element, and returning the minimum element in the stack.
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse331_cc6.png" tag="yt__img">
+                    </div>
+                </div>
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Queue</h2>
+                        <p>One project involved implementation of a Queue ADT. Attached is an example of the dequeue member function for a queue object, which removes the front (or back if specified) item from the queue, and updates the array size accordingly.
+                            This function will run in O(1) time.
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse331_queue.png" tag="yt__img">
+                    </div>
+                </div>
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Hash Table</h2>
+                        <p>Another project gave us the opportunity to implement a Hash Table ADT. Attached is an example of the main functions for a hash table, all running at an amortized run time of O(1), allowing for growing and shrinking of the array size accordingly.
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse331_hashtable.png" tag="yt__img">
+                    </div>
+                </div>
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Binary Search Trees</h2>
+                        <p>After learning the properties of trees in coding, we implemented a Binary Search Tree ADT. Attached is an example of an insertion function into a Binary Search Tree, which is able to run in O(logn) time due to the reduction of the searchable size 
+                            of insertion with each step of the search according to the invariants of a BST.
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse331_bst.png" tag="yt__img">
+                    </div>
+                </div>
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>AVL Trees</h2>
+                        <p>Implementing an AVL tree is similar to that of a BST, however additional mechanics have to be implemented in order for the tree to have the balanced invariant that is required of an AVL tree. Attached is a copy of the rebalancing function that is run 
+                            any time the balance factor is greater or less than the allowed window of each tree node. The time complexity of this function is O(1).
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse331_avl.png" tag="yt__img">
+                    </div>
+                </div>
+            </div>
+            <div class="course_divider">
+                <h2>Tree Traversals</h2>
+            </div>
+            <div class="course_algo">
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Inorder Traversal</h2>
+                        <p>Follows the search pattern of: left child, then root, then right child. This will start at the very left-most element and traverse the roots and right children, eventually hitting the root node, and then traversing to the root node's right children.
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse331_inorder.png" tag="yt__img">
+                    </div>
+                </div>
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Preorder Traversal</h2>
+                        <p>Follows the search pattern of: root, left child, right child. This will start at the root and go down all the way until the left-most node is hit, and then traverse backwards through each root node's right child, eventually getting back to the root node and traversing through the right children.
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse331_preorder.png" tag="yt__img">
+                    </div>
+                </div>
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Postorder Traversal</h2>
+                        <p>Follows the search pattern of: left child, right child, root. This will start at the very left-most node and traverse back up until hitting the root, then traversing through all the right children before the root node is added.
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse331_postorder.png" tag="yt__img">
+                    </div>
+                </div>
+                <div class="course_algo_1">
+                    <div class="course_algo_1_desc">
+                        <h2>Levelorder Traversal</h2>
+                        <p>This traverses through each level of the tree, yielding each node based on it's height in the tree, smaller heights being added first. It utilizes a queue to keep track of the current level nodes children.
+                        </p>
+                    </div>
+                    <div class="project_algo_1_img">
+                        <img id="ws" src="../images/courses_cse331_levelorder.png" tag="yt__img">
+                    </div>
+                </div>
+            </div>
+            <div class="course_divider">
+                <h2>Coding Portion</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

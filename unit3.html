@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Website</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">EMILY TELGENHOFF</a>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/youtube.html" class="navbar__links">Youtube</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/classwork.html" class="navbar__links">Courses</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/projects.html" class="navbar__links">Projects</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="/resume.html" class="button">Resume</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="project">
+        <div class="projectdesc">
+            <div class="projectdesc_video">
+                <img id="ws" src="images/flask_title.png" height=650px width=1000px tag="yt__img">
+            </div>
+            <div class="projectdesc_text">
+                <h1>Data Analysis with Web Servers and Database Storage</h1>
+                <p>
+                    The project I worked with a team on while employed by Michigan State University St. Andrews. We were tasked to create a website that took data from temperature and humidity
+                    sensors that were located across campus and exported that data through a website that we created.
+                </p>
+            </div>
+        </div>
+        <div class="divider">
+            <h1>Creation Procedure</h1>
+        </div>
+        <div class="project_algo">
+            <div class="project_algo_1">
+                <div class="project_algo_1_desc">
+                    <h2>Step One</h2>
+                    <p>Using Bootstrap functionality, we created the front-end of the website for users. This included a navigation bar with login and user details as well as access to separate areas
+                        of the university. One could click on individual rooms with buttons that were located on a map, which led to a new tab that displayed graphs for the data in that room.
+                    </p>
+                </div>
+                <div class="project_algo_1_img">
+                    <img id="ws" src="images/flask_1.png" height=350px width=600px tag="yt__img">
+                </div>
+            </div>
+            <div class="project_algo_1">
+                <div class="project_algo_1_desc">
+                    <h2>Step Two</h2>
+                    <p>Displaying graphs using the data from the temperature and humidity sensors. These graphs were created using JavaScript and continuously updated based on the data from the sensors that
+                        constantly updated.
+                    </p>
+                </div>
+                <div class="project_algo_1_img">
+                    <img id="ws" src="images/flask_2.png" height=350px width=600px tag="yt__img">
+                </div>
+            </div>
+            <div class="project_algo_1">
+                <div class="project_algo_1_desc">
+                    <h2>Step Three</h2>
+                    <p>Creating a database using MySQL that served to store all the information for the users, rooms, and sensors. The user database distinguished admins from normal users, who had greater access to
+                        the data in the website. 
+                    </p>
+                </div>
+                <div class="project_algo_1_img">
+                    <a href="https://github.com/emtelgen/seleniumproject/blob/main/employee.py#L85-L89">
+                        <img id="ws" src="images/flask_3.png" height=350px width=600px tag="yt__img">
+                    </a>
+                </div>
+            </div>
+            <div class="project_algo_1">
+                <div class="project_algo_1_desc">
+                    <h2>Step Four</h2>
+                    <p>Taking input from the user with a login form that could be accessed. This would connect to the database, determine the login validity, and allow access to information on the website based on the outcome.
+                    </p>
+                </div>
+                <div class="project_algo_1_img">
+                    <img id="ws" src="images/flask_4.png" height=300px width=600px tag="yt__img">
+                </div>
+            </div>
+        </div>
+        <div class="divider">
+            <h1>Additional Modifications</h1>
+        </div>
+        <div class="modifications">
+            <p>
+                Additional modifications that could be used to make this website better would include more additions to the HTML used to make the website more visually appealing. Other aspects that could be added would be increasing the functionality of the graphs with more user interaction.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
